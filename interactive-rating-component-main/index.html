@@ -1,31 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Interactive rating component</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Interactive rating component</title>
 
-  <!-- Rating state start -->
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Rating state start -->
+    <main>
+      <article class="starter ">
+        <img src="./images/icon-star.svg" alt="star with in circle" />
+        <header class="question">How did we do?</header>
+        <p class="content">
+          Please let us know how we did with your support request. All feedback
+          is appreciated to help us improve our offering!
+        </p>
+        <nav>
+          <button onclick="handlescore('1',this)">1</button>
+          <button onclick="handlescore('2',this)">2</button>
+          <button onclick="handlescore('3',this)">3</button>
+          <button onclick="handlescore('4',this)">4</button>
+          <button onclick="handlescore('5',this)">5</button>
+        </nav>
+        <div>
+          <button onclick="handleSubmit()">SUBMIT</button>
+        </div>
+      </article>
+      <article class="rating hide">
+        <img src="./images/illustration-thank-you.svg" alt="score image" />
+        <h3 class="score">You selected <span></span> out of 5</h3>
+        <h1 class="thankyou">Thank you!</h1>
+        <p class="thankcontent">
+          We appreciate you taking the time to give a rating. If 
+          you ever need more support, don't hesitate to get in touch!
+        </p>
+      </article>
+    </main>
 
-  
+    <!-- Thank you state end -->
 
-  <!-- Thank you state end -->
-
-  
-  <div class="attribution">
+    <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+  </div> -->
+  </body>
+  <script src="./index.js"></script>
 </html>
