@@ -6,10 +6,13 @@ function handlescore(num,element){
     numberButton.forEach((btn)=>{
         
         btn.classList.remove("active");
+        btn.setAttribute("aria-pressed", "false");
         
     })
     element.classList.add("active");
     document.querySelector("span").innerHTML=score;
+    element.setAttribute("aria-pressed", "true");
+
 
 }
 function handleSubmit(){

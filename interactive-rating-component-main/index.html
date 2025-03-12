@@ -40,15 +40,16 @@
           Please let us know how we did with your support request. All feedback
           is appreciated to help us improve our offering!
         </p>
-        <nav>
-          <button onclick="handlescore('1',this)">1</button>
-          <button onclick="handlescore('2',this)">2</button>
-          <button onclick="handlescore('3',this)">3</button>
-          <button onclick="handlescore('4',this)">4</button>
-          <button onclick="handlescore('5',this)">5</button>
-        </nav>
+        
+        <nav aria-label="rating out of 5">
+            <button onclick="handlescore('1',this)" aria-label="Rate 1 out of 5">1</button>
+            <button onclick="handlescore('2',this)" aria-label="Rate 2 out of 5">2</button>
+            <button onclick="handlescore('3',this)" aria-label="Rate 3 out of 5">3</button>
+            <button onclick="handlescore('4',this)" aria-label="Rate 4 out of 5">4</button>
+            <button onclick="handlescore('5',this)" aria-label="Rate 5 out of 5">5</button>
+            </nav>
         <div>
-          <button onclick="handleSubmit()">SUBMIT</button>
+          <button onclick="handleSubmit()" aria-label="Submit your rating" aria-disabled="true">SUBMIT</button>
         </div>
       </article>
       <article class="rating hide">
