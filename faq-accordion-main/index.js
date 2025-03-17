@@ -4,6 +4,7 @@ const h3s = document.querySelectorAll(".ques");
 para.forEach((p) => {
   p.classList.add("hide");
 });
+para[0].classList.remove("hide");
 
 function toggleAnswer(button, targetPara) {
   const target = button.getAttribute("data-target");
