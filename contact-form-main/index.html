@@ -33,15 +33,18 @@
           <div class="first">
             <label for="firstname">First Name *</label> <br />
             <input type="text" id="firstname" name="firstname" required />
+            <p class="error">This field is required</p>
           </div>
           <div class="last">
             <label for="lastname">Last Name *</label> <br />
             <input type="text" id="lastname" name="lastname" required />
-          </div>
+            <p class="error">This field is required</p>
+        </div>
         </div>
         <div class="email">
           <label for="emailId">Email Address *</label><br />
           <input type="email" id="emailId" name="email" required />
+          <p class="error">Please enter a valid email address</p>
         </div>
         <div class="query">
           <label for="radio">Query *</label><br />
@@ -56,19 +59,23 @@
                     <input type="radio" name="query" value="support" />
                     <span>Support Request</span>
                 </label>
+                
             </div>
+            <p class="error">Please select a query type</p>
         </div>
         <div class="message">
           <label for="message">Message *</label><br />
           <textarea id="message" name="message" required></textarea>
+          <p class="error">This field is required</p>
         </div>
         <div class="final">
           <input type="checkbox" name="concent" id="concent" /> 
           <span class="check">
               I consent to being contacted by the team *
 
-          </span>
+            </span>
         </div>
+        <p class="error">To submit this form, please consent to being contacted</p>
         <button type="submit">Submit</button>
       </form>
     </main>
@@ -78,4 +85,5 @@
     Coded by <a href="#">Your Name Here</a>.
   </div> -->
   </body>
+  <script src="./main.js"></script>
 </html>
