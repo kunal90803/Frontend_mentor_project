@@ -14,21 +14,25 @@ clickButton.addEventListener("click",(e)=>{
     if (firstName.value.trim() === "") {
         // errors[0].innerHTML = "This field is required";
         errors[0].style.visibility = "visible";
+        firstName.style.borderColor="red";
         isValid = false;
     } 
     if (lastName.value.trim() === "") {
         // errors[1].innerHTML = "This field is required";
         errors[1].style.visibility = "visible";
+        lastName.style.borderColor="red";
         isValid = false;
     } 
     if (emailId.value.trim()   === "" || !pattern.test(emailId.value)) {
         // errors[2].innerHTML = "Please enter a valid email address";
         errors[2].style.visibility = "visible";
+        emailId.style.borderColor="red";
         isValid = false;
     } 
     if (message.value.trim() === "") {
         // errors[0].innerHTML = "This field is required";
         errors[4].style.visibility = "visible";
+        message.style.borderColor="red";
         isValid = false;
     } 
     if(!checkbox.checked){
@@ -54,14 +58,25 @@ clickButton.addEventListener("click",(e)=>{
 
     if(isValid==true && isSelected==true){
         // alert("Form submitted");
-        showToast();
+       showToast();
+       firstName.value="";
+       lastName.value="";
+       emailId.value="";
+       message.value="";
+       checkbox.checked=false;
+       queryRadios.forEach((radio) => {
+        radio.checked=false;
+    });
+
     }
 })
 
-let toastBox=document.querySelector(".toastBox");
 function showToast(){
-    let toast = document.createElement('div');
-    toast.classList.add('toast');
-    toast.innerHTML = 'Thanks for completing the form we will be in touch soon';
-    toastBox.appendChild(toast);
+    let element = document.querySelector(".toastBox");
+    element.style.display="flex";
+    setTimeout(()=>{
+        element.style.display="none";
+    },3000)
 }
+
+
