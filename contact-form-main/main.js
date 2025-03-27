@@ -14,29 +14,34 @@ clickButton.addEventListener("click",(e)=>{
     if (firstName.value.trim() === "") {
         // errors[0].innerHTML = "This field is required";
         errors[0].style.visibility = "visible";
+        errors[0].setAttribute('aria-hidden','false');
         firstName.style.borderColor="red";
         isValid = false;
     } 
     if (lastName.value.trim() === "") {
         // errors[1].innerHTML = "This field is required";
         errors[1].style.visibility = "visible";
+        errors[1].setAttribute('aria-hidden','false');
         lastName.style.borderColor="red";
         isValid = false;
     } 
     if (emailId.value.trim()   === "" || !pattern.test(emailId.value)) {
         // errors[2].innerHTML = "Please enter a valid email address";
         errors[2].style.visibility = "visible";
+        errors[2].setAttribute('aria-hidden','false');
         emailId.style.borderColor="red";
         isValid = false;
     } 
     if (message.value.trim() === "") {
         // errors[0].innerHTML = "This field is required";
         errors[4].style.visibility = "visible";
+        errors[4].setAttribute('aria-hidden','false');
         message.style.borderColor="red";
         isValid = false;
     } 
     if(!checkbox.checked){
         errors[5].style.visibility = "visible";
+        errors[5].setAttribute('aria-hidden','false');
         isValid = false;
         document.querySelector(".final").style.marginBottom="5px";
     }
@@ -67,6 +72,9 @@ clickButton.addEventListener("click",(e)=>{
        queryRadios.forEach((radio) => {
         radio.checked=false;
     });
+    errors.forEach((err)=>{
+        err.setAttribute('aria-hidden','true');
+    })
 
     }
 })

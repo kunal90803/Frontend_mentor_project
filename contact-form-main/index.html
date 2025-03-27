@@ -26,9 +26,9 @@
     </style>
   </head>
   <body>
-    <section class="toastBox">
+    <section class="toastBox" role="alert" aria-live="polite">
       <div>
-        <img src="./assets/images/icon-success-check.svg" alt="Successful Check Image" />
+        <img src="./assets/images/icon-success-check.svg" alt="Checkmark indicating success" />
         <span>
             Message Sent!
         </span>
@@ -41,19 +41,19 @@
         <article class="name">
           <div class="first">
             <label for="firstname">First Name *</label> <br />
-            <input type="text" id="firstname" name="firstname" required />
-            <p class="error">This field is required</p>
+            <input type="text" id="firstname" name="firstname" required aria-required="true" />
+            <p class="error" aria-hidden="true">This field is required</p>
           </div>
           <div class="last">
             <label for="lastname">Last Name *</label> <br />
-            <input type="text" id="lastname" name="lastname" required />
-            <p class="error">This field is required</p>
+            <input type="text" id="lastname" name="lastname" required aria-required="true"/>
+            <p class="error" aria-hidden="true">This field is required</p>
           </div>
         </article>
         <article class="email">
           <label for="emailId">Email Address *</label><br />
-          <input type="email" id="emailId" name="email" required />
-          <p class="error">Please enter a valid email address</p>
+          <input type="email" id="emailId" name="email" required aria-required="true"/>
+          <p class="error" aria-hidden="true">Please enter a valid email address</p>
         </article>
         <article class="query">
           <label for="radio">Query *</label><br />
@@ -68,20 +68,20 @@
               <span>Support Request</span>
             </label>
           </div>
-          <p class="error">Please select a query type</p>
+          <p class="error" aria-hidden="true">Please select a query type</p>
         </article>
         <article class="message">
           <label for="message">Message *</label><br />
-          <textarea id="message" name="message" required></textarea>
-          <p class="error">This field is required</p>
+          <textarea id="message" name="message" required aria-required="true"></textarea>
+          <p class="error" aria-hidden="true">This field is required</p>
         </article>
         <article class="final">
-          <input type="checkbox" name="concent" id="concent" />
+          <input type="checkbox" name="concent" id="concent" aria-required="true"/>
           <span class="check">
             I consent to being contacted by the team *
           </span>
         </article>
-        <p class="error">
+        <p class="error" aria-hidden="true">
           To submit this form, please consent to being contacted
         </p>
         <button type="submit">Submit</button>
