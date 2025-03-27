@@ -41,21 +41,21 @@
         <article class="name">
           <div class="first">
             <label for="firstname">First Name *</label> <br />
-            <input type="text" id="firstname" name="firstname" required aria-required="true" />
+            <input type="text" id="firstname" name="firstname" required aria-required="true" aria-label="firstname"/>
             <p class="error" aria-hidden="true">This field is required</p>
           </div>
           <div class="last">
             <label for="lastname">Last Name *</label> <br />
-            <input type="text" id="lastname" name="lastname" required aria-required="true"/>
+            <input type="text" id="lastname" name="lastname" required aria-required="true" aria-label="lastname"/>
             <p class="error" aria-hidden="true">This field is required</p>
           </div>
         </article>
         <article class="email">
           <label for="emailId">Email Address *</label><br />
-          <input type="email" id="emailId" name="email" required aria-required="true"/>
+          <input type="email" id="emailId" name="email" required aria-required="true" aria-label="email"/>
           <p class="error" aria-hidden="true">Please enter a valid email address</p>
         </article>
-        <article class="query">
+        <article class="query" aria-label="query">
           <label for="radio">Query *</label><br />
           <div class="radi">
             <label class="radio-container">
@@ -72,19 +72,19 @@
         </article>
         <article class="message">
           <label for="message">Message *</label><br />
-          <textarea id="message" name="message" required aria-required="true"></textarea>
+          <textarea id="message" name="message" required aria-required="true" aria-label="message"></textarea>
           <p class="error" aria-hidden="true">This field is required</p>
         </article>
         <article class="final">
-          <input type="checkbox" name="concent" id="concent" aria-required="true"/>
-          <span class="check">
+          <input type="checkbox" name="concent" id="concent" aria-required="true" aria-label="checkbox"/>
+          <span  for="concent" class="check" >
             I consent to being contacted by the team *
           </span>
         </article>
-        <p class="error" aria-hidden="true">
+        <p class="error" aria-hidden="true" aria-label="error">
           To submit this form, please consent to being contacted
         </p>
-        <button type="submit">Submit</button>
+        <button type="submit" role="submit">Submit</button>
       </form>
     </main>
 
